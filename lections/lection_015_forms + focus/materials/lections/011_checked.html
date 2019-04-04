@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: blue;
+            overflow: hidden;
+        }
+        header{
+            display: inline-block;
+            position: relative;
+        }
+
+        label {
+            display: inline-block;
+            border-radius: 10px;
+            padding: 10px;
+            background: #eee;
+            border: 1px solid #eee;
+            box-shadow: 1px 3px 7px #ebe9e9;
+        }
+
+        .dropdown {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            width: 100px;
+            background: #eee;
+            transition: all 1s;
+            position: absolute;
+            left: -100%;
+
+        }
+        .dropdown li {
+            border-bottom: 1px solid greenyellow;
+        }
+
+        .check {
+            display: none;
+        }
+        .check:checked ~ .dropdown{
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="foo" class="check"/>
+        <label for="foo" class="button">click me</label>
+        <ul class="dropdown">
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+        </ul>
+    </header>
+</body>
+</html>
